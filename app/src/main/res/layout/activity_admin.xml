@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <!-- Tabs -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:background="@color/white" android:padding="8dp">
+        <Button android:id="@+id/tab_articles" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
+            android:text="Articles" android:textSize="11sp" android:textColor="@color/white"
+            android:background="@color/green_primary" android:layout_margin="3dp"/>
+        <Button android:id="@+id/tab_results" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
+            android:text="Résultats" android:textSize="11sp" android:textColor="@color/text_dark"
+            android:background="@color/background" android:layout_margin="3dp"/>
+        <Button android:id="@+id/tab_events" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
+            android:text="Agenda" android:textSize="11sp" android:textColor="@color/text_dark"
+            android:background="@color/background" android:layout_margin="3dp"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+
+            <!-- Panel Articles -->
+            <LinearLayout android:id="@+id/panel_articles" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="visible">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AJOUTER UN ARTICLE"
+                    android:textColor="@color/green_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                <EditText android:id="@+id/et_art_emoji" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Emoji (ex: 📋)" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_art_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Titre de l'article" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+                <Spinner android:id="@+id/sp_art_category" android:layout_width="match_parent" android:layout_height="48dp" android:background="@color/white" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_art_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Date (ex: 2025-01-15)" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_art_excerpt" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Résumé" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp" android:minLines="2"/>
+                <EditText android:id="@+id/et_art_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Contenu complet" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="12dp" android:minLines="4" android:gravity="top"/>
+                <Button android:id="@+id/btn_add_article" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="PUBLIER L'ARTICLE" android:background="@color/green_primary" android:textColor="@color/white" android:layout_marginBottom="20dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ARTICLES PUBLIÉS"
+                    android:textColor="@color/green_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <LinearLayout android:id="@+id/list_articles" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+            </LinearLayout>
+
+            <!-- Panel Résultats -->
+            <LinearLayout android:id="@+id/panel_results" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AJOUTER DES RÉSULTATS"
+                    android:textColor="@color/green_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                <Spinner android:id="@+id/sp_concours" android:layout_width="match_parent" android:layout_height="48dp" android:background="@color/white" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_session" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Session (ex: 2025)" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noms des candidats (un par ligne):" android:textColor="@color/text_dark" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/et_candidats_names" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Sgt DUPONT Jean&#10;Lt MBEKI Pierre" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp" android:minLines="4" android:gravity="top"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notes correspondantes (une par ligne):" android:textColor="@color/text_dark" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+                <EditText android:id="@+id/et_candidats_notes" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="18.5&#10;15.0" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="12dp" android:minLines="4" android:gravity="top" android:inputType="textMultiLine"/>
+                <Button android:id="@+id/btn_add_result" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="ENREGISTRER LES RÉSULTATS" android:background="@color/green_primary" android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Panel Agenda -->
+            <LinearLayout android:id="@+id/panel_events" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AJOUTER UN ÉVÉNEMENT"
+                    android:textColor="@color/green_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                <EditText android:id="@+id/et_evt_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Titre de l'événement" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_evt_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Date (ex: 2025-03-15)" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_evt_location" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Lieu (défaut: Kinshasa)" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_evt_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Description" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="12dp" android:minLines="3" android:gravity="top"/>
+                <Button android:id="@+id/btn_add_event" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="AJOUTER L'ÉVÉNEMENT" android:background="@color/green_primary" android:textColor="@color/white" android:layout_marginBottom="20dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ÉVÉNEMENTS PLANIFIÉS"
+                    android:textColor="@color/green_primary" android:textSize="11sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <LinearLayout android:id="@+id/list_events" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

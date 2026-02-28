@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header"
+            android:padding="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="COMEC" android:textColor="@color/white" android:textSize="32sp" android:textStyle="bold" android:letterSpacing="0.2"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Commandement des Écoles" android:textColor="@color/yellow" android:textSize="12sp" android:layout_marginTop="4dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Forces Armées Congolaises" android:textColor="#B2FFFFFF" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="NOS ÉCOLES" android:textColor="@color/green_primary" android:textSize="11sp"
+            android:textStyle="bold" android:letterSpacing="0.1" android:layout_marginBottom="12dp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="🏫 DEMIA — École Militaire Interarmes\nFormation des officiers supérieurs\n\n🎓 DEM — École d'État-Major\nFormation des officiers d'état-major\n\n⚔️ CFCU — Centre de Formation des Cadres\nFormation des sous-officiers\n\n🔵 CC — Centre de Commandement\nFormation des commandants d'unité"
+            android:textColor="@color/text_dark" android:textSize="14sp" android:lineSpacingExtra="6dp"
+            android:background="@color/white" android:padding="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

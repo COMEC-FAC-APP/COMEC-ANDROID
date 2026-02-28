@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/nav_home" android:title="Accueil" android:icon="@android:drawable/ic_menu_home" app:showAsAction="never"/>
+    <item android:id="@+id/nav_news" android:title="Actualités" android:icon="@android:drawable/ic_menu_info_details" app:showAsAction="never"/>
+    <item android:id="@+id/nav_results" android:title="Résultats" android:icon="@android:drawable/ic_menu_agenda" app:showAsAction="never"/>
+    <item android:id="@+id/nav_agenda" android:title="Agenda" android:icon="@android:drawable/ic_menu_my_calendar" app:showAsAction="never"/>
+    <item android:id="@+id/nav_about" android:title="À Propos" android:icon="@android:drawable/ic_menu_info_details" app:showAsAction="never"/>
+</menu>
